@@ -18,7 +18,7 @@ namespace UnitTesting_Hometask
                 _recentlyUsedList.Remove(newRecord);
             
 
-            _recentlyUsedList.Add(newRecord);
+            _recentlyUsedList.Insert(0, newRecord);
         }
 
         public string ReadRecord(int index)

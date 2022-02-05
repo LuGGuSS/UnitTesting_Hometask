@@ -18,8 +18,8 @@ namespace UnitTesting_Hometask
             rul.AddRecord("First record");
             rul.AddRecord("Second record");
 
-            Assert.AreEqual(rul.ReadRecord(1), "Second record");
-            Assert.AreEqual(rul.ReadRecord(0), "First record");
+            Assert.AreEqual(rul.ReadRecord(0), "Second record");
+            Assert.AreEqual(rul.ReadRecord(1), "First record");
         }
 
         [TestMethod]
@@ -31,7 +31,7 @@ namespace UnitTesting_Hometask
             rul.AddRecord("Second record");
             rul.AddRecord("First record");
 
-            Assert.AreEqual(rul.ReadRecord(1), "First record");
+            Assert.AreEqual(rul.ReadRecord(0), "First record");
         }
     }
 }
