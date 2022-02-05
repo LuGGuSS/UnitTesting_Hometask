@@ -8,14 +8,18 @@ namespace UnitTesting_Hometask
 {
     class RecentlyUsedList
     {
-        public void AddRecord(string secondRecord)
+
+        private List<string> _recentlyUsedList = new List<string>();
+        
+        
+        public void AddRecord(string newRecord)
         {
-            throw new NotImplementedException();
+            _recentlyUsedList.Add(newRecord);
         }
 
-        public string ReadRecord(int p0)
+        public string ReadRecord(int index)
         {
-            throw new NotImplementedException();
+            return _recentlyUsedList.ElementAt(index);
         }
     }
 }
