@@ -14,6 +14,10 @@ namespace UnitTesting_Hometask
         
         public void AddRecord(string newRecord)
         {
+            if (_recentlyUsedList.Contains(newRecord))
+                _recentlyUsedList.Remove(newRecord);
+            
+
             _recentlyUsedList.Add(newRecord);
         }
 
