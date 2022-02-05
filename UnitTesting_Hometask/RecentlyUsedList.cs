@@ -11,17 +11,19 @@ namespace UnitTesting_Hometask
 
         private List<string> _recentlyUsedList = new List<string>();
 
-        public int MaxSize = 0;
+        public int MaxSize;
 
         public RecentlyUsedList(){}
         public RecentlyUsedList(int i)
         {
-            throw new NotImplementedException();
+            MaxSize = i;
         }
 
 
         public void AddRecord(string newRecord)
         {
+            if(_recentlyUsedList.Count == MaxSize && MaxSize!=0)
+                _recentlyUsedList.RemoveAt(MaxSize-1);
             if (_recentlyUsedList.Contains(newRecord))
                 _recentlyUsedList.Remove(newRecord);
             
@@ -31,6 +33,8 @@ namespace UnitTesting_Hometask
 
         public string ReadRecord(int index)
         {
+            if ((index >= MaxSize || index < 0)&& MaxSize!=0 )
+                throw new IndexOutOfRangeException($"Index {index} is out of bounds.");
             return _recentlyUsedList.ElementAt(index);
         }
     }
