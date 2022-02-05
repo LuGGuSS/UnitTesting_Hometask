@@ -18,5 +18,12 @@ namespace StringSum
             Assert.AreEqual(strSum.Sum("10","1"), "11");
         }
 
+        [TestMethod]
+        public void IncorrectValueEqualsZeroTest()
+        {
+            var strSum = new StringSum();
+
+            Assert.AreEqual(strSum.Sum("10", "10.0"), "10");
+        }
     }
 }
