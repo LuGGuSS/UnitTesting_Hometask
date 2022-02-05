@@ -12,5 +12,10 @@ namespace UnitTesting_Hometask
         {
             throw new NotImplementedException();
         }
+
+        public string ReadRecord(int p0)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
