@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace StringSum
 {
     [TestClass]
-    class Tests
+    public class StringSumTests
     {
         [TestMethod]
         public void SumTest()
