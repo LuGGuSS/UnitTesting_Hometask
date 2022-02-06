@@ -9,11 +9,9 @@ namespace WordWrap
         [TestMethod]
         public void WrappingTest()
         {
-            var ww = new WordWrap();
+            var st = "Wrap this text";
 
-            var st = "Wrap this test";
-
-            Assert.AreEqual(ww.Wrap(st,4), "W\nrap t\nhis t\next");
+            Assert.AreEqual("W\nrap t\nhis t\next", WordWrap.Wrap(st, 1));
         }
     }
 }
